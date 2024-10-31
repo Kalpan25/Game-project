@@ -28,4 +28,14 @@ public class item {
     public String toString(){
         return name;
     }
+
+    public void open(){
+        Game.print("you can't open that.");
+    
+    }
+    public void close(){
+        Game.print("you can't close that.");
+    }
+
+
 }

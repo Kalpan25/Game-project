@@ -6,8 +6,24 @@ import java.util.ArrayList;
 
 public class Game {
         public static void main(String[] args) {
-            runGame();  
+        runGame();  
         }
+        public static void print(String[] args) {
+            System.out.println(obj.toString());
+        }
+        
+        static Room currentRoom = World.buildWorld();
+        public static  getCurrentRoom() {
+            return currentRoom;
+        }
+        public static Item getitem(String name){
+            for(Item i : inventory){
+                if(i.getName().equals(name)){
+                    return i;
+                }
+            }
+            return null;
+        }    
        static ArrayList<item> inventory = new ArrayList<item>();
 
         public static void runGame() {
