@@ -1,4 +1,4 @@
-package Game;
+
 
 public class World {
     // Builds the game world.   
@@ -18,6 +18,8 @@ public class World {
     item kit = new item("first aid kit","You found a first aid kit!");
     item bat = new item("baseball bat","You found a baseball bat!");
     item bag = new item("bag","You found a bag!");
+    Combination combination = new Combination("combination","You found a combination lock!");
+    Safe safe = new Safe("safe","You found a safe!");
     
     BruceHALL201.addExit(BruceHALL202, 'w');
     BruceHALL201.addExit(BruceHALL203, 'e');
@@ -35,11 +37,13 @@ public class World {
 
     Elevetor.addExit(FirstFloor, 'd');
     RestRoom.addExit(BruceHALL202, 'n');
+    RestRoom.additem("safe", safe);
     RestRoom.additem("knife", knife);
     
     
     janitorCloset.addExit(BruceHALL201, 's');
     janitorCloset.additem("smallkey", smallkey);
+    janitorCloset.additem("combination", combination);
 
     return BruceHALL201;
     }

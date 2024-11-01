@@ -1,4 +1,4 @@
-package Game;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -8,20 +8,21 @@ public class Game {
         public static void main(String[] args) {
         runGame();  
         }
-        public static void print(String[] args) {
+        public static void print(Object obj) {
             System.out.println(obj.toString());
         }
         
         static Room currentRoom = World.buildWorld();
-        public static  getCurrentRoom() {
+        public static Room getCurrentRoom() {
             return currentRoom;
         }
-        public static Item getitem(String name){
-            for(Item i : inventory){
+        public static item getiteminventory(String name){
+            for(item i : inventory){
                 if(i.getName().equals(name)){
                     return i;
                 }
             }
+            
             return null;
         }    
        static ArrayList<item> inventory = new ArrayList<item>();
@@ -92,10 +93,54 @@ public class Game {
                 
             break;
 
+            case "use":
+
+                System.out.println("You are trying to use the " + words[1] + ".");
+                
+                if(currentRoom.getitem(words[1]) != null){
+                    currentRoom.getitem(words[1]).use();
+                }
+
+                else{
+
+                    if (getiteminventory(words[1]) == null){
+                        System.out.println("There is no such item");
+                    }
+
+                    else{
+                        getiteminventory(words[1]).use();
+                        System.out.println();
+                    }
+                }
+
+                break;
+                case "open":
+
+                System.out.println("You are trying to open the " + words[1] + ".");
+                
+                if(currentRoom.getitem(words[1]) != null){
+                    currentRoom.getitem(words[1]).open();
+                }
+
+                else{
+
+                    if (getiteminventory(words[1]) == null){
+                        System.out.println("There is no such item");
+                    }
+
+                    else{
+                        getiteminventory(words[1]).open();
+                        System.out.println();
+                    }
+                }
+
+            break;
+
             default:
                 System.out.println("Invalid direction. Please try again.");
             
             }
+        
 
         } while(!command.equals("x"));
      

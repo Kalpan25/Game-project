@@ -1,11 +1,12 @@
-package Game;
 
-public class item {
+
+public class item extends Game{
     private String name;
     private String description;
 
 
     public item(String name, String description) {
+        super();
         this.name = name;
         this.description = description;
     }
@@ -33,8 +34,8 @@ public class item {
         Game.print("you can't open that.");
     
     }
-    public void close(){
-        Game.print("you can't close that.");
+    public void use(){
+        Game.print("you can't use that.");
     }
 
 
