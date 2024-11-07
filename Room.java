@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Room {
     private String description;
+    private String name;
     private Room east;
     private Room west;
     private Room north;
@@ -11,10 +12,12 @@ public class Room {
     private Room up;
     private Room down;
     private HashMap<String, item> items = new HashMap<String, item>()  ;
+    private boolean lock;
 
      
-    public Room(String description) {
+    public Room(String  description, String Name) {
         this.description = description;
+        this.name = Name;
     }
     public Room getExit(char x) {
         if (x == 'e') 
@@ -62,6 +65,17 @@ public class Room {
         items.remove(name);
         
     }
-    
-}
-    
+    public boolean getlock(){
+        return lock;
+    }
+
+    public void setlock(boolean lock){
+        this.lock = lock;
+     }
+    public String getRoomname(){
+        return name;
+    }
+    public void setRoomname(String name){
+        this.name = name;
+    }
+}    
