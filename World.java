@@ -13,13 +13,14 @@ public class World {
     Room RestRoom = new Room("You are in the restroom.","Rest Room");
 
     item keycard = new item("keycard","You found a keycard!");
-    item smallkey = new item("key","You found a small key!");
+    Key key = new Key("key","You found a small key!");
     item knife = new item("knife","You found a knife!");
     item kit = new item("first aid kit","You found a first aid kit!");
     item bat = new item("baseball bat","You found a baseball bat!");
     item bag = new item("bag","You found a bag!");
     Combination combination = new Combination("combination","You found a combination lock!");
     Safe safe = new Safe("safe","You found a safe!");
+    
     
     BruceHALL201.addExit(BruceHALL202, 'w');
     BruceHALL201.addExit(BruceHALL203, 'e');
@@ -31,23 +32,23 @@ public class World {
     RestRoom.additem("Baseball bat", bat);
     RestRoom.additem("bag",bag);
     BruceHALL202.addExit(BruceHALL201, 'e'); 
-    BruceHALL202.setlock(false);
+    BruceHALL202.setLock(true);
 
     BruceHALL203.addExit(Elevetor, 's');
-    BruceHALL203.setlock(false);
+    BruceHALL203.setLock(false);
     BruceHALL203.addExit(BruceHALL201, 'w');
 
     Elevetor.addExit(FirstFloor, 'd');
-    Elevetor.setlock(true);
+    Elevetor.setLock(false);
     RestRoom.addExit(BruceHALL202, 'n');
-    RestRoom.setlock(true);
+    RestRoom.setLock(false);
     RestRoom.additem("safe", safe);
     RestRoom.additem("knife", knife);
     
     
     janitorCloset.addExit(BruceHALL201, 's');
-    janitorCloset.setlock(false);
-    janitorCloset.additem("smallkey", smallkey);
+    janitorCloset.setLock(false);
+    janitorCloset.additem("key", key);
     janitorCloset.additem("combination", combination);
 
     return BruceHALL201;

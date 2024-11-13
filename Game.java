@@ -55,10 +55,8 @@ public class Game {
                     System.out.println("The door is locked.");
                 }
                 else
-                    currentRoom= nextRoom;
-                
-                
-            break;
+                    currentRoom = nextRoom;
+                break;
             
             case"x":
                 System.out.println("Thanks for playing ,Goodbye  ");
@@ -125,6 +123,7 @@ public class Game {
                 }
 
                 break;
+
                 case "open":
 
                 System.out.println("You are trying to open the " + words[1] + ".");

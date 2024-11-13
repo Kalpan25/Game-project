@@ -11,7 +11,8 @@ public class Room {
     private Room south;
     private Room up;
     private Room down;
-    private HashMap<String, item> items = new HashMap<String, item>()  ;
+    private HashMap<String, item> items = new HashMap<String, item>();
+    
     private boolean lock;
 
      
@@ -69,8 +70,8 @@ public class Room {
         return lock;
     }
 
-    public void setlock(boolean lock){
-        this.lock = lock;
+    public void setLock(boolean bool){
+        lock= bool;
      }
     public String getRoomname(){
         return name;
