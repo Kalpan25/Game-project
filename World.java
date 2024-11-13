@@ -31,8 +31,10 @@ public class World {
     RestRoom.additem("first aid kit",kit);
     RestRoom.additem("Baseball bat", bat);
     RestRoom.additem("bag",bag);
+    BruceHALL202.additem("key", key);
     BruceHALL202.addExit(BruceHALL201, 'e'); 
-    BruceHALL202.setLock(true);
+    BruceHALL202.setLock(false);
+    BruceHALL202.additem("key", key);
 
     BruceHALL203.addExit(Elevetor, 's');
     BruceHALL203.setLock(false);
@@ -47,8 +49,7 @@ public class World {
     
     
     janitorCloset.addExit(BruceHALL201, 's');
-    janitorCloset.setLock(false);
-    janitorCloset.additem("key", key);
+    janitorCloset.setLock(true);
     janitorCloset.additem("combination", combination);
 
     return BruceHALL201;

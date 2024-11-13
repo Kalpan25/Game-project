@@ -28,7 +28,7 @@ public class Game {
        static ArrayList<item> inventory = new ArrayList<item>();
 
         public static void runGame() {
-          Room currentRoom = World.buildWorld();
+          
           Scanner scanner = new Scanner(System.in);
         
           String command;

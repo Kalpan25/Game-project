@@ -37,6 +37,6 @@ public class item extends Game{
     public void use(){
         Game.print("you can't use that.");
     }
-
+    
 
 }
