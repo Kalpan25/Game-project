@@ -1,6 +1,6 @@
 
 
-public class item extends Game{
+public class item extends Game {
     private String name;
     private String description;
 

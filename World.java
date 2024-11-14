@@ -15,7 +15,7 @@ public class World {
     item keycard = new item("keycard","You found a keycard!");
     Key key = new Key("key","You found a small key!");
     item knife = new item("knife","You found a knife!");
-    item kit = new item("first aid kit","You found a first aid kit!");
+    item kit = new item("firstaid kit","You found a first aid kit!");
     item bat = new item("baseball bat","You found a baseball bat!");
     item bag = new item("bag","You found a bag!");
     Combination combination = new Combination("combination","You found a combination lock!");
