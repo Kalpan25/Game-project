@@ -20,6 +20,8 @@ public class World {
     item bag = new item("bag","You found a bag!");
     Combination combination = new Combination("combination","You found a combination lock!");
     Safe safe = new Safe("safe","You found a safe!");
+    Computer computer = new Computer("computer","ITS Computer");
+    Passbook passbook = new Passbook("passbook","Password note book");
     
     
     BruceHALL201.addExit(BruceHALL202, 'w');
@@ -39,13 +41,15 @@ public class World {
     BruceHALL203.addExit(Elevetor, 's');
     BruceHALL203.setLock(false);
     BruceHALL203.addExit(BruceHALL201, 'w');
+    BruceHALL203.additem("passbook", passbook);
 
     Elevetor.addExit(FirstFloor, 'd');
-    Elevetor.setLock(false);
+    Elevetor.setLock(true);
     RestRoom.addExit(BruceHALL202, 'n');
     RestRoom.setLock(false);
     RestRoom.additem("safe", safe);
     RestRoom.additem("knife", knife);
+    RestRoom.additem("computer", computer);
     
     
     janitorCloset.addExit(BruceHALL201, 's');
