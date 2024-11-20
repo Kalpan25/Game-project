@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 
 public class Room {
-    private String description;
+    
     private String name;
     private Room east;
     private Room west;
@@ -16,8 +16,8 @@ public class Room {
     private boolean lock;
 
      
-    public Room(String  description, String Name) {
-        this.description = description;
+    public Room( String Name) {
+    
         this.name = Name;
     }
     public Room getExit(char x) {
@@ -52,7 +52,8 @@ public class Room {
         down = room;
      } 
     public String toString() {
-        return description;
+        String s = this.getDescription(name);
+        return s;
     }
 
     public void additem(String name , item i){
@@ -79,4 +80,12 @@ public class Room {
     public void setRoomname(String name){
         this.name = name;
     }
+    public String getDescription(String n ){
+        for(String s:Game.rooms.keySet()){
+            if(s.equals(n)){
+                return Game.rooms.get(s);
+            }    
+        }
+        return null;
+    } 
 }    

@@ -4,13 +4,13 @@ public class World {
     // Builds the game world.   
     // Returns the room the player starts in.
     public static Room buildWorld() {
-    Room BruceHALL201 = new Room("You are in the 201.", "BruceHall201");
-    Room BruceHALL202 = new Room("You are in the 202.", "BruceHall202");
-    Room BruceHALL203 = new Room("You are in the 203.", "BruceHall203");
-    Room janitorCloset = new Room("You are in the janitor closet.", "JanitorCloset");
-    Room Elevetor = new Room("You are in the elevator.","Elevetor");
-    Room FirstFloor = new Room("You are on the first floor.","First Floor");
-    Room RestRoom = new Room("You are in the restroom.","Rest Room");
+    Room BruceHALL201 = new Room( "BruceHall201");
+    Room BruceHALL202 = new Room( "BruceHall202");
+    Room BruceHALL203 = new Room( "BruceHall203");
+    Room janitorCloset = new Room( "JanitorCloset");
+    Room Elevetor = new Room("Elevetor");
+    Room FirstFloor = new Room("First Floor");
+    Room RestRoom = new Room("Rest Room");
 
     item keycard = new item("keycard","You found a keycard!");
     Key key = new Key("key","You found a small key!");

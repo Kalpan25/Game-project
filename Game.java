@@ -32,22 +32,21 @@ public class Game {
         try {
             Scanner input = new Scanner(new File("Description.txt"));
             while(input.hasNextLine()) {
-                Thread.sleep(1000); // sleep for 1 second
+                //Thread.sleep(1000); // sleep for 1 second
                 String name = input.nextLine();
                 String desc = input.nextLine();
 
                 if(!name.equals("#") && !desc.equals("#")){
                     rooms.put(name, desc);
-                    System.out.println(name);
-                    System.out.println(desc);
+                    
                 }
             }
             input.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found!!!");
-        } catch (InterruptedException ex) {
-            System.out.println("Bummer.");
-        }
+        } //catch (InterruptedException ex) {
+            //System.out.println("Bummer.");
+        //}
     }
 
        static ArrayList<item> inventory = new ArrayList<item>();
