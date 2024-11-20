@@ -1,20 +1,28 @@
 BruceHall201
 You are in the 201. Doorways lead west to 202, east to 203, and north to the janitor closet.
 #
+#
 BruceHall202
 You are in the 202. A small room with a desk. Doorways lead south to the restroom and east back to 201.
+#
 #
 BruceHall203
 You are in the 203. It’s a quiet room with a desk and a chair. A doorway leads south to the elevator and west to 201.
 #
+#
 Janitor Closet
 You are in the janitor closet. It’s cramped and filled with cleaning supplies. The only way out is south to 201. The door is locked.
+#
 #
 Elevator
 You are in the elevator. A small metal box with buttons for different floors. The door leads down to the first floor. It is locked.
 #
+#
 First Floor
 You are on the first floor. A wide hallway stretches before you. There is nothing else here.
 #
+#
 Restroom
 You are in the restroom. There are several stalls and a sink. Doorways lead north back to 202.
+#
+#
