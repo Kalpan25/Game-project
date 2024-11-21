@@ -1,7 +1,6 @@
 
+import java.io.*;
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -48,9 +47,43 @@ public class Game {
             //System.out.println("Bummer.");
         //}
     }
-
+            public static void saveList(String fileName) {
+            File f = new File(fileName);
+            try {
+                FileOutputStream fos = new FileOutputStream(f);
+                ObjectOutputStream stream = new ObjectOutputStream(fos);
+                stream.writeObject(currentRoom);
+                stream.writeObject(inventory);
+                stream.writeObject(roomObjects);
+                stream.close();
+            } catch (FileNotFoundException e) {
+                System.out.println("File "+fileName+" not found.");
+            } catch (IOException ex) {
+                System.out.println("Bummers, man");
+            }
+        }
+        public static void loadList(String fileName) {
+            File f = new File(fileName);
+            try {
+            FileInputStream fos = new FileInputStream(f);
+            ObjectInputStream stream = new ObjectInputStream(fos);
+            currentRoom = (Room) stream.readObject();
+            inventory = (ArrayList) stream.readObject();
+            roomObjects = (HashMap) stream.readObject();
+            stream.close();
+            } catch (FileNotFoundException e) {
+            System.out.println("File "+fileName+" not found.");
+            System.exit(0);
+            } catch (IOException ex) {
+            System.out.println("Bummers, man");
+            } catch (ClassNotFoundException ex) {
+            System.out.println("Not an object.");
+            }
+            }
+        
        static ArrayList<item> inventory = new ArrayList<item>();
        static HashMap<String, String> rooms = new HashMap<String, String>();
+       static HashMap<String,Room> roomObjects = new HashMap<String , Room>();
 
         public static void runGame() {
           
@@ -170,6 +203,14 @@ public class Game {
                 }
 
             break;
+            case "save":
+            saveList(words[1]);
+
+            break;
+            case "load":
+            loadList(words[1]);
+            
+
 
             default:
                 System.out.println("Invalid direction. Please try again.");
@@ -181,7 +222,10 @@ public class Game {
      
         scanner.close();
     }
+    
+
 }          
+
 
 
     

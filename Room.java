@@ -1,8 +1,8 @@
 
 import java.util.HashMap;
+import java.io.Serializable;
 
-
-public class Room {
+public class Room implements Serializable{
     
     private String name;
     private Room east;
@@ -17,7 +17,7 @@ public class Room {
 
      
     public Room( String Name) {
-    
+       
         this.name = Name;
     }
     public Room getExit(char x) {

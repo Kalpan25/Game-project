@@ -1,6 +1,6 @@
 
-
-public class item {
+import java.io.Serializable;
+public class item implements Serializable {
     private String name;
     private String description;
 
