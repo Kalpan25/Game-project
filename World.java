@@ -11,7 +11,8 @@ public class World {
     Room Elevetor = new Room("Elevetor");
     Room FirstFloor = new Room("First Floor");
     Room RestRoom = new Room("Rest Room");
-
+    
+    
     item keycard = new item("keycard","You found a keycard!");
     Key key = new Key("key","You found a small key!");
     item knife = new item("knife","You found a knife!");
@@ -23,11 +24,13 @@ public class World {
     Computer computer = new Computer("computer","ITS Computer");
     Passbook passbook = new Passbook("passbook","Password note book");
     
+    Puppy puppy = new Puppy();
     
     BruceHALL201.addExit(BruceHALL202, 'w');
     BruceHALL201.addExit(BruceHALL203, 'e');
     BruceHALL201.additem("keycard", keycard);
     BruceHALL201.addExit(janitorCloset, 'n');
+    BruceHALL201.addNPC("puppy", puppy);
 
     BruceHALL202.addExit(RestRoom, 's');
     RestRoom.additem("first aid kit",kit);

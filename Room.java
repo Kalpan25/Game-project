@@ -17,8 +17,8 @@ public class Room implements Serializable{
 
      
     public Room( String Name) {
-       
         this.name = Name;
+        Game.roomObjects.put(Name,this);
     }
     public Room getExit(char x) {
         if (x == 'e') 

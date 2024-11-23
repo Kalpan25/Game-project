@@ -10,6 +10,10 @@ public class Game {
         textFile();
         runGame();  
         }
+       static ArrayList<item> inventory = new ArrayList<item>();
+       static HashMap<String, String> rooms = new HashMap<String, String>();
+       static HashMap<String,Room> roomObjects = new HashMap<String , Room>();
+       public static Scanner scanner = new Scanner(System.in);
         public static void print(Object obj) {
             System.out.println(obj.toString());
         }
@@ -81,13 +85,10 @@ public class Game {
             }
             }
         
-       static ArrayList<item> inventory = new ArrayList<item>();
-       static HashMap<String, String> rooms = new HashMap<String, String>();
-       static HashMap<String,Room> roomObjects = new HashMap<String , Room>();
 
         public static void runGame() {
           
-          Scanner scanner = new Scanner(System.in);
+         
         
           String command;
 
@@ -210,7 +211,7 @@ public class Game {
             case "load":
             loadList(words[1]);
             
-
+            break;
 
             default:
                 System.out.println("Invalid direction. Please try again.");
