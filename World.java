@@ -25,6 +25,7 @@ public class World {
     Passbook passbook = new Passbook("passbook","Password note book");
     
     Puppy puppy = new Puppy("puppy","A hideous puppy wags his tail!");
+    Killer killer = new Killer("killer","A man with a gun!");
 
     
     BruceHALL201.addExit(BruceHALL202, 'w');
@@ -46,6 +47,7 @@ public class World {
     BruceHALL203.setLock(false);
     BruceHALL203.addExit(BruceHALL201, 'w');
     BruceHALL203.additem("passbook", passbook);
+    BruceHALL203.addNPC("killer", killer);
 
     Elevetor.addExit(FirstFloor, 'd');
     Elevetor.setLock(true);
