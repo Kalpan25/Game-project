@@ -202,6 +202,18 @@ public class Game {
                         System.out.println();
                     }
                 }
+                break;
+
+                case "talk":
+                    System.out.println("You are trying to talk to the " + words[1] + ".");
+
+                        if(currentRoom.getNPC(words[1]) != null){
+                            currentRoom.getNPC(words[1]).talk();
+                            System.out.println();
+                        }
+                        else{
+                            System.out.println("There is no such thing\n");
+                        }
 
             break;
             case "save":

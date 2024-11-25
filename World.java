@@ -24,7 +24,8 @@ public class World {
     Computer computer = new Computer("computer","ITS Computer");
     Passbook passbook = new Passbook("passbook","Password note book");
     
-    Puppy puppy = new Puppy();
+    Puppy puppy = new Puppy("puppy","A hideous puppy wags his tail!");
+
     
     BruceHALL201.addExit(BruceHALL202, 'w');
     BruceHALL201.addExit(BruceHALL203, 'e');

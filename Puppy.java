@@ -1,7 +1,7 @@
 public class Puppy extends NPC {
-    private int talkCount = 0;  // To track how many times the player has talked to the puppy
+     int talkCount = 0;  
 
-    public Puppy() {
+    public Puppy(String name, String description) {
         super("puppy", "A hideous puppy wags his tail.");
     }
 
@@ -9,7 +9,7 @@ public class Puppy extends NPC {
     public void talk() {
         talkCount++;  
 
-        if (talkCount == 1) {
+        if (talkCount == 0) {
             
             say("Hi! I'm an adorable puppy!");
             String[] options = {
@@ -17,7 +17,8 @@ public class Puppy extends NPC {
                 "Ew, no. You're actually kinda hideous."
             };
             getResponse(options);
-        } else if (talkCount == 2) {
+            talkCount++;
+        } else if (talkCount == 1) {
             
             say("Hey! Wanna play fetch? Say yes! Say yes!");
             String[] options = {
@@ -25,15 +26,17 @@ public class Puppy extends NPC {
                 "No. I am a horrible person and don't like playing with puppies."
             };
             getResponse(options);
-        } else if (talkCount == 3) {
+            talkCount++;
+        } else {
           
             say("Yip! wags tail");
+            talkCount++;
         }
     }
 
     @Override
     public void response(int option) {
-        if (talkCount == 1) {
+        if (talkCount == 0) {
             
             switch (option) {
                 case 1:
@@ -44,12 +47,14 @@ public class Puppy extends NPC {
                     Game.print("The puppy bites you. You deserve it.");
                     break;
             }
-        } else if (talkCount == 2) {
+        } else if (talkCount == 1) {
             
             switch (option) {
                 case 1:
                     say("Yay! Fetch!");
                     Game.print("The puppy runs off and returns with a ball. You receive the ball.");
+                    item ball = new item("ball", "A small ball");
+                    Game.inventory.add(ball);
                     break;
                 case 2:
                     say("You're a bad person! I don't like you!");
