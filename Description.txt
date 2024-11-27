@@ -10,7 +10,7 @@ BruceHall203
 You are in the 203. It’s a quiet room with a desk and a chair. A doorway leads south to the elevator and west to 201.
 #
 #
-Janitor Closet
+JanitorCloset
 You are in the janitor closet. It’s cramped and filled with cleaning supplies. The only way out is south to 201. The door is locked.
 #
 #
