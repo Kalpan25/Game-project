@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class Game {
         public static void main(String[] args) {
         textFile();
-        runGame();  
+        runGame();
         }
        static ArrayList<item> inventory = new ArrayList<item>();
        static HashMap<String, String> rooms = new HashMap<String, String>();
