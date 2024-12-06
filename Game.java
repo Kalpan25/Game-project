@@ -8,14 +8,18 @@ import java.util.HashMap;
 public class Game {
         public static void main(String[] args) {
         textFile();
-        runGame();
+        gui = new GUI();
+        Game.print(currentRoom);
+
+        
         }
+        private static GUI gui = new GUI();
        static ArrayList<item> inventory = new ArrayList<item>();
        static HashMap<String, String> rooms = new HashMap<String, String>();
        static HashMap<String,Room> roomObjects = new HashMap<String , Room>();
        public static Scanner scanner = new Scanner(System.in);
         public static void print(Object obj) {
-            System.out.println(obj.toString());
+            gui.textArea.append((obj.toString())+"\n");
         }
         
         static Room currentRoom = World.buildWorld();
@@ -86,17 +90,9 @@ public class Game {
             }
         
 
-        public static void runGame() {
-          
-         
-        
-          String command;
+        public static void processCommand(String command) {
 
-          do{
-            
-            System.out.println(currentRoom);
-            System.out.print("Where do you want to go ?: ");
-            command = scanner.nextLine();
+        
             String[] words = command.split(" ");
 
             switch(words[0]) {
@@ -108,21 +104,22 @@ public class Game {
             case "d":
                 Room nextRoom = currentRoom.getExit(command.charAt(0));
                 if(nextRoom == null) {
-                    System.out.println("You can't go that way.");
+                    Game.print("You can't go that way.");
                 }
                 else if(nextRoom.getlock() == true) {
-                    System.out.println("The door is locked.");
+                    Game.print("The door is locked.");
                 }
                 else
                     currentRoom = nextRoom;
+                    Game.print(currentRoom);
                 break;
             
             case"x":
-                System.out.println("Thanks for playing ,Goodbye  ");
+                Game.print("Thanks for playing ,Goodbye  ");
                 break;
             case "take":
                 if(currentRoom.getitem(words[1]) == null){
-                    System.out.println("There is no item here.");
+                    Game.print("There is no item here.");
                 }
                 else{
                     inventory.add(currentRoom.getitem(words[1]));
@@ -131,17 +128,17 @@ public class Game {
                 break;
             case "i":
                 if (inventory.size()==0){
-                    System.out.println("Inventory is empty.");
+                    Game.print("Inventory is empty.");
                 }
                 else{
                     for(item i: inventory){
-                        System.out.println(i);
+                        Game.print(i);
                     }
                 }
                 break;
             case "look":
             if(currentRoom.getitem(words[1]) != null){
-                System.out.println(currentRoom.getitem(words[1]).getDescription() + "\n");
+                Game.print(currentRoom.getitem(words[1]).getDescription() + "\n");
             }
 
 
@@ -150,20 +147,20 @@ public class Game {
 
                 for(item c : inventory){
                     if(c.getName().equals(words[1])){
-                        System.out.println(c.getDescription() + "\n");
+                        Game.print(c.getDescription() + "\n");
                         found = true;      
                     }
                 }
 
                 if(found == false)
-                    System.out.println("There is no such item.\n");
+                    Game.print("There is no such item.\n");
             }
                 
             break;
 
             case "use":
 
-                System.out.println("You are trying to use the " + words[1] + ".");
+                Game.print("You are trying to use the " + words[1] + ".");
                 
                 if(currentRoom.getitem(words[1]) != null){
                     currentRoom.getitem(words[1]).use();
@@ -172,12 +169,12 @@ public class Game {
                 else{
 
                     if (getiteminventory(words[1]) == null){
-                        System.out.println("There is no such item");
+                        Game.print("There is no such item");
                     }
 
                     else{
                         getiteminventory(words[1]).use();
-                        System.out.println();
+                        Game.print("\n");
                     }
                 }
 
@@ -185,7 +182,7 @@ public class Game {
 
                 case "open":
 
-                System.out.println("You are trying to open the " + words[1] + ".");
+                Game.print("You are trying to open the " + words[1] + ".");
                 
                 if(currentRoom.getitem(words[1]) != null){
                     currentRoom.getitem(words[1]).open();
@@ -194,25 +191,25 @@ public class Game {
                 else{
 
                     if (getiteminventory(words[1]) == null){
-                        System.out.println("There is no such item");
+                        Game.print("There is no such item");
                     }
 
                     else{
                         getiteminventory(words[1]).open();
-                        System.out.println();
+                        Game.print("\n");
                     }
                 }
                 break;
 
                 case "talk":
-                    System.out.println("You are trying to talk to the " + words[1] + ".");
+                    Game.print("You are trying to talk to the " + words[1] + ".");
 
                         if(currentRoom.getNPC(words[1]) != null){
                             currentRoom.getNPC(words[1]).talk();
-                            System.out.println();
+                            Game.print("\n");
                         }
                         else{
-                            System.out.println("There is no such thing\n");
+                            Game.print("There is no such thing\n");
                         }
 
             break;
@@ -226,18 +223,17 @@ public class Game {
             break;
 
             default:
-                System.out.println("Invalid direction. Please try again.");
+                Game.print("Invalid direction. Please try again.");
             
             }
         
 
-        } while(!command.equals("x"));
+        } 
      
-        scanner.close();
+     
     }
     
-
-}          
+    
 
 
 
