@@ -26,3 +26,7 @@ RestRoom
 You are in the restroom. There are several stalls and a sink. Doorways lead north back to 202.
 #
 #
+Elevetor
+you are in Elevator. going to the first floor. Congratulations! You have successfully escaped the building!
+#
+#

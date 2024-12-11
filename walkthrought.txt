@@ -1,107 +1,92 @@
 
-Game Walkthrough
+1. Start in Bruce Hall 201 (Room 1)
+Objective: Find the keycard.
+• Action: Look around the room to find the keycard.
+• Item Location: The keycard is in Bruce Hall 201.
+• Action to take: Type take keycard to collect the keycard.
+◦ Output: "You have picked up the keycard."
+Next Step: Go west to Bruce Hall 202.
 
-Objective: You need to navigate the rooms, interact with NPCs, find items, and unlock the Elevator to escape to the First Floor.
+2. Go to Bruce Hall 202 (Room 2)
+Objective: Find the key.
+• Action: Look around the room to find the key.
+• Item Location: The key is in Bruce Hall 202.
+• Action to take: Type take key to collect the key.
+◦ Output: "You have picked up the key."
+Next Step: Go east to Bruce Hall 201 to unlock the Janitor Closet going north.
 
----
-
-1. **Start in Bruce Hall 201 (Room 1)**
-Objective: Find the 'keycard'.
-- **Action:** Look around the room to find the keycard.
-- **Item Location:** The **keycard** is in Bruce Hall 201.
-- **Action to take:** Type `take keycard` to collect the keycard.
-  - **Output:** "You have picked up the keycard."
-**Next Step:** Go west to Bruce Hall 202.
-
----
-
-2. **Go to Bruce Hall 202 (Room 2)**
-Objective: Find the 'key'.
-- **Action:** Look around the room to find the **key**.
-- **Item Location:** The **key** is in Bruce Hall 202.
-- **Action to take:** Type `take key` to collect the key.
-  - **Output:** "You have picked up the key."
-**Next Step:** Go east to Bruce Hall 201 to unlock the Janitor Closet going north.
-
----
-
-3. **Go to Bruce Hall 201 Again (Room 1)**
+3. Go to Bruce Hall 201 Again (Room 1)
 Objective: Use the key to unlock the Janitor Closet.
-- **Action:** Type `use key` to unlock the Janitor Closet.
-  - **Output:** "You used the key to open the Janitor Closet."
-**Next Step:** Go north to the Janitor Closet.
+• Action: Type use key to unlock the Janitor Closet.
+◦ Output: "You used the key to open the Janitor Closet."
+Next Step: Go north to the Janitor Closet.
 
----
+4. Go to the Janitor Closet (Room 4)
+Objective: Collect the combination item.
+• Action: Look around the room to find the combination.
+• Item Location: The combination is in the Janitor Closet.
+• Action to take: Type take combination to collect the combination.
+◦ Output: "You have picked up the combination."
+Next Step: Go south to Bruce Hall 201, and then go east to Bruce Hall 203.
 
-4. **Go to the Janitor Closet (Room 4)**
-Objective: Collect the **combination** item.
-- **Action:** Look around the room to find the **combination**.
-- **Item Location:** The **combination** is in the Janitor Closet.
-- **Action to take:** Type `take combination` to collect the combination.
-  - **Output:** "You have picked up the combination."
-**Next Step:** Go south to Bruce Hall 201, and then go east to Bruce Hall 203.
+5. Go to Bruce Hall 203 (Room 3)
+Objective: Interact with the NPC named Killer.
+• Action: Type talk to killer to start a conversation.
+◦ Killer's Dialogue:
+    ▪ "You shouldn't have come here. Do you think you can escape?"
+Conversation Options:
+    1. Option 1: "I'm not afraid of you!" → Killer responds, "Brave, but foolish."
+    2. Option 2: "Please, let me go!" → Killer responds, "Cowardice won't save you."
+Next Step: After the conversation, go south to the Elevator.
 
----
+6. Go to Bruce Hall 203 (continued)
+Objective: Find the passbook.
+• Action: Look around the room to find the passbook.
+• Item Location: The passbook is in Bruce Hall 203.
+• Action to take: Type take passbook to collect the passbook.
+◦ Output: "You have picked up the passbook."
+Next Step: Go back to the computer in the Restroom.
+◦ Directions to go: Go west; west; south.
 
-5. **Go to Bruce Hall 203 (Room 3)**
-Objective: Interact with the NPC named **Killer**.
-- **Action:** Type `talk to killer` to start a conversation.
-  - **Killer's Dialogue:** 
-    - "You shouldn't have come here. Do you think you can escape?"
-**Conversation Options:**
-1. **Option 1:** "I'm not afraid of you!" → Killer responds, "Brave, but foolish."
-2. **Option 2:** "Please, let me go!" → Killer responds, "Cowardice won't save you."
-**Next Step:** After the conversation, go south to the Elevator.
+7. Use the Computer
+Objective: Use the passbook and the computer to access the SoftwareApp.
+• Action: Type use passbook on the computer to access the SoftwareApp.
+◦ Output: "You accessed the computer using the passbook. You can now use the SoftwareApp."
+Next Step: Take the SoftwareApp.
 
----
-and find safe to opne the combination 
+8. Go to the Elevator (Room 5)
+Objective: Use the SoftwareApp to unlock the Elevator.
+• Action: Now that you have the SoftwareApp, go to the Elevator.
+• Directions to go: Go north, east, east, south.
+• Action to take: Type use software to unlock the Elevator.
+◦ Output: "You used the system. You can now access the Elevator."
+Next Step: Go to the Elevator.
 
-use the keycard and find passbook to use the computer pasbook together.
-6. **Go to the Elevator (Room 5)**
-Objective: Use the **SoftwareApp** to unlock the Elevator.
-- **Action:** You need to have the **SoftwareApp** to unlock the Elevator. If you don’t have it, return to Bruce Hall 203 to collect it.
-- **Item Location:** The **SoftwareApp** is in Bruce Hall 203. 
-- **Action to take:** Type `take software` to collect the SoftwareApp.
-  - **Output:** "You have picked up the SoftwareApp."
-**Next Step:** Now that you have the SoftwareApp, use it to unlock the Elevator.  [the softeware app in the computer]
-
----
-
-7. **Use the SoftwareApp to Unlock the Elevator**
-Objective: Unlock the Elevator.
-- **Action:** Type `use software` to unlock the Elevator.
-  - **Output:** "You used the system. You can now access the Elevator."
-**Next Step:** Go south to the Elevator.
-
----
-
-8. **Go to the Elevator (Room 5)**
+9. Go to the Elevator (Room 5)
 Objective: Use the Elevator to escape.
-- **Action:** Type `use elevator` to use the Elevator.
-  - **Output:** "You enter the elevator, and the doors close behind you. You ascend to the first floor."
+• Action: Type use elevator to use the Elevator.
+◦ Output: "You enter the elevator, and the doors close behind you. You ascend to the first floor."
 
----
-
-9. **Reach the First Floor (Game Complete!)**
+10. Reach the First Floor (Game Complete!)
 Objective: You've successfully escaped the building!
-**Game End:** You have completed the game by escaping using the Elevator.
-
----
+Game End: You have completed the game by escaping using the Elevator.
 
 Summary of Steps to Beat the Game:
-1. **Bruce Hall 201:**
-   - Take the **keycard** (type `take keycard`).
-2. **Bruce Hall 202:**
-   - Take the **key** (type `take key`).
-   - Use the key to unlock the Janitor Closet (type `use key`).
-3. **Janitor Closet:**
-   - Take the **combination** (type `take combination`).
-4. **Bruce Hall 203:**
-   - Talk to **Killer** (type `talk to killer`).
-   - Choose an option from the dialogue.
-5. **Bruce Hall 203 (continued):**
-   - Take the **SoftwareApp** (type `take software`).
-6. **Elevator:**
-   - Use the **SoftwareApp** to unlock the Elevator (type `use software`).
-   - Use the Elevator to escape (type `use elevator`).
-7. **End Game:** You've escaped and won the game!
+1. Bruce Hall 201:
+    ◦ Take the keycard (type take keycard).
+2. Bruce Hall 202:
+    ◦ Take the key (type take key).
+    ◦ Use the key to unlock the Janitor Closet (type use key).
+3. Janitor Closet:
+    ◦ Take the combination (type take combination).
+4. Bruce Hall 203:
+    ◦ Talk to Killer (type talk to killer).
+    ◦ Choose an option from the dialogue.
+5. Bruce Hall 203 (continued):
+    ◦ Take the passbook (type take passbook).
+    ◦ Use the passbook on the computer (type use passbook).
+    ◦ Take the SoftwareApp (type take software).
+6. Elevator:
+    ◦ Use the SoftwareApp to unlock the Elevator (type use software).
+    ◦ Use the Elevator to escape (type use elevator).
+7. End Game: You've escaped and won the game!

@@ -188,10 +188,7 @@ public class Game {
                         Game.print("\n");
                     }
                 }
-                if (words[1].equalsIgnoreCase("elevator") && currentRoom.getRoomname().equals("FirstFloor")) {
-                    Game.print("Congratulations! You have successfully escaped the building.");
-                    System.exit(0);  // Ends the game
-                }
+               
                 break;
 
                 case "open":
