@@ -18,11 +18,11 @@ Elevator
 You are in the elevator. A small metal box with buttons for different floors. The door leads down to the first floor. It is locked.
 #
 #
-First Floor
+FirstFloor
 You are on the first floor. A wide hallway stretches before you. There is nothing else here.
 #
 #
-Restroom
+RestRoom
 You are in the restroom. There are several stalls and a sink. Doorways lead north back to 202.
 #
 #

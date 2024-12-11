@@ -9,8 +9,8 @@ public class World {
     Room BruceHALL203 = new Room( "BruceHall203");
     Room janitorCloset = new Room( "JanitorCloset");
     Room Elevetor = new Room("Elevetor");
-    Room FirstFloor = new Room("First Floor");
-    Room RestRoom = new Room("Rest Room");
+    Room FirstFloor = new Room("FirstFloor");
+    Room RestRoom = new Room("RestRoom");
     
     
     item keycard = new item("keycard","You found a keycard!");
