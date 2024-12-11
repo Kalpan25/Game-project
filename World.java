@@ -41,7 +41,7 @@ public class World {
     BruceHALL202.additem("key", key);
     BruceHALL202.addExit(BruceHALL201, 'e'); 
     BruceHALL202.setLock(false);
-    BruceHALL202.additem("key", key);
+    
 
     BruceHALL203.addExit(Elevetor, 's');
     BruceHALL203.setLock(false);
