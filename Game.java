@@ -117,15 +117,26 @@ public class Game {
             case"x":
                 Game.print("Thanks for playing ,Goodbye  ");
                 break;
-            case "take":
-                if(currentRoom.getitem(words[1]) == null){
-                    Game.print("There is no item here.");
-                }
-                else{
-                    inventory.add(currentRoom.getitem(words[1]));
-                    currentRoom.additem(words[1],null);
+
+
+                case "take":
+                if (words.length < 2) {
+                    Game.print("Please specify the item you want to take.");
+                } else {
+                    String itemName = words[1].toLowerCase();
+                    if (currentRoom.getitem(itemName) == null) {
+                        Game.print("There is no item here.");
+                    } else {
+                        item itemToTake = currentRoom.getitem(itemName);
+                        inventory.add(itemToTake);
+                        currentRoom.removeItem(itemName);
+                        Game.print("You picked up the " + itemName + ".");
+                    }
                 }
                 break;
+            
+
+
             case "i":
                 if (inventory.size()==0){
                     Game.print("Inventory is empty.");
@@ -177,7 +188,10 @@ public class Game {
                         Game.print("\n");
                     }
                 }
-
+                if (words[1].equalsIgnoreCase("elevator") && currentRoom.getRoomname().equals("FirstFloor")) {
+                    Game.print("Congratulations! You have successfully escaped the building.");
+                    System.exit(0);  // Ends the game
+                }
                 break;
 
                 case "open":
