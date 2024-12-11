@@ -49,10 +49,10 @@ Next Step: Go back to the computer in the Restroom.
 ◦ Directions to go: Go west; west; south.
 
 7. Use the Computer
-Objective: Use the passbook and the computer to access the SoftwareApp.
-• Action: Type use passbook on the computer to access the SoftwareApp.
+Objective: take the computer to access the SoftwareApp.
+• Action: Type open computer to access the SoftwareApp.
 ◦ Output: "You accessed the computer using the passbook. You can now use the SoftwareApp."
-Next Step: Take the SoftwareApp.
+Next Step: SoftwareApp is in inventory.
 
 8. Go to the Elevator (Room 5)
 Objective: Use the SoftwareApp to unlock the Elevator.
@@ -60,7 +60,7 @@ Objective: Use the SoftwareApp to unlock the Elevator.
 • Directions to go: Go north, east, east, south.
 • Action to take: Type use software to unlock the Elevator.
 ◦ Output: "You used the system. You can now access the Elevator."
-Next Step: Go to the Elevator.
+Next Step: Go to the Elevator going south.
 
 9. Go to the Elevator (Room 5)
 Objective: Use the Elevator to escape.
